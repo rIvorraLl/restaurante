@@ -10,9 +10,9 @@ import java.util.Arrays;
 
 public class Plato {
 
-    int id;
-    String nombre;
-    float precio;
+    private int id;
+    private String nombre;
+    private float precio;
     private static int contador;
 
     public Plato() {
