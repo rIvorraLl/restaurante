@@ -131,7 +131,7 @@ public class MyTask {
                                 break;
                         }
                     } else {
-                        System.out.println("Por favor, introduzca una opción correcta (0-5)");
+                        System.out.println("Por favor, introduzca una opción correcta (0-5 o 9 para salir)");
                         try {
                             opcion = Integer.parseInt(kb.nextLine());
                         } catch (Exception e) {
@@ -172,7 +172,7 @@ public class MyTask {
                                 break;
                         }
                     } else {
-                        System.out.println("Por favor, introduzca una opción correcta (0-5)");
+                        System.out.println("Por favor, introduzca una opción correcta (0-1 o 9 para salir)");
                         try {
                             opcion = Integer.parseInt(kb.nextLine());
                         } catch (Exception e) {
