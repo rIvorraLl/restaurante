@@ -11,27 +11,29 @@ public class MyTask {
         ArrayList<Pedido> listaPedidos = new ArrayList<Pedido>();
         ArrayList<Persona> listaEmpleados = new ArrayList<Persona>();
 
-        Plato np = new Plato();
-        np.cargarPlatos(listaPlatos);
-        System.out.println(listaPlatos.toString());
+        Plato nuevoPlato = new Plato();
+        
+        System.out.println("********************************************************************************************\n"
+                + "*                        MENÚ DE HOY:                                                      *");
+        nuevoPlato.cargarPlatos(listaPlatos);
+        System.out.println("********************************************************************************************");
 
-        Cocinero cocinero1 = new Cocinero("Pere");
-        System.out.println(cocinero1.toString());
-        listaEmpleados.add(cocinero1);
-        Cocinero cocinero2 = new Cocinero("Joan");
-        System.out.println(cocinero2.toString());
-        listaEmpleados.add(cocinero2);
-
-        Camarero camarero1 = new Camarero("Miquel");
-        System.out.println(camarero1.toString());
+        Camarero camarero1 = new Camarero("Pere");
+        Camarero camarero2 = new Camarero("Aina");
+        Cocinero cocinero1 = new Cocinero("Joan");
+        Cocinero cocinero2 = new Cocinero("Margalida");
+        System.out.println("*               LISTA DE EMPLEADOS:                                                        *\n"
+                + camarero1.toString() + "Tipo de empleado: " + camarero1.getClass().getSimpleName() + "\n"
+                + cocinero1.toString() + "Tipo de empleado: " + camarero2.getClass().getSimpleName() + "\n"
+                + camarero2.toString() + "Tipo de empleado: " + cocinero1.getClass().getSimpleName() + "\n"
+                + cocinero2.toString() + "Tipo de empleado: " + cocinero1.getClass().getSimpleName());
+        System.out.println("********************************************************************************************");
+        
         listaEmpleados.add(camarero1);
-        Camarero camarero2 = new Camarero("Pep Toni");
-        System.out.println(camarero2.toString());
         listaEmpleados.add(camarero2);
-
-        //Pedido nuevoPedido = camarero1.crearPedido(listaPlatos);
-        //listaPedidos.add(nuevoPedido);
-        //cocinero1.verPendientes(listaPedidos);
+        listaEmpleados.add(cocinero1);
+        listaEmpleados.add(cocinero2);
+        
         boolean continuar = true;
         boolean idCorrecto = false;
         Persona empleado = null;
